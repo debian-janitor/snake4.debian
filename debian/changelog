@@ -1,0 +1,53 @@
+snake4 (1.0.12-1) unstable; urgency=low
+
+  * New upstream release (with clarified license in README)
+  * Updated debian/copyright with Artistic license (Closes: #130400)
+  * Fixed typo in description (Closes: #125369)
+  
+ -- Karl Soderstrom <ks@debian.org>  Sun, 31 Mar 2002 13:35:30 +0200
+
+snake4 (1.0.11-4) unstable; urgency=low
+
+  * Added sticky bit to /usr/games/snake4, which means it should
+  be possible to write to the high score file. (Closes: #115650)
+
+ -- Karl Soderstrom <ks@debian.org>  Fri, 14 Dec 2001 14:46:04 +0100
+
+snake4 (1.0.11-3) unstable; urgency=low
+
+  * Moved high score file to /var/games.
+
+ -- Karl Soderstrom <ks@debian.org>  Sat, 10 Mar 2001 11:56:07 +0100
+
+snake4 (1.0.11-2) unstable; urgency=low
+
+  * Updated maintainer email.
+  * Updated download URL and author contacts.
+  * Removed INSTALL and empty README.Debian.
+
+ -- Karl Soderstrom <ks@debian.org>  Sat, 27 Jan 2001 23:31:01 +0100
+
+snake4 (1.0.11-1) unstable; urgency=low
+
+  * New upstream release (Closes: #27562)
+  * New maintainer (Closes: #74839)
+  * Compiled against libxpm4 (Closes: #67950)
+  * Changed to debhelper
+  
+ -- Karl Soderstrom <coldn@gamearena.net>  Fri,  8 Dec 2000 20:20:04 +0100
+
+snake4 (1.0.10-1.1) unstable; urgency=low
+
+  * NMU by Branden Robinson <branden@debian.org>.
+  * Recompile against modern xpm4g package to get proper shared library
+    dependency and permit this package to be installed with forthcoming
+    XFree86 4.x packages, which include libXpm.
+  * debian/control: added Build-Depends
+
+ -- Branden Robinson <branden@debian.org>  Mon, 23 Oct 2000 14:28:59 -0500
+
+snake4 (1.0.10-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Ole J. Tetlie <olet@debian.org>  Sun,  7 Dec 1997 17:24:35 +0100

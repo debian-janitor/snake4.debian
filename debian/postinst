@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#DEBHELPER#
+
+# Move high score file
+if [ -f /var/lib/games/snake4.score ]; then
+  mv -f /var/lib/games/snake4.score /var/games
+fi
+
