@@ -13,7 +13,7 @@ COMPILED_BY	= `whoami`
 # Where are shhmsg, shhopt, Xpm and X11?
 
 # GNU/Linux at home
-INCDIR		= -I/local/include -I/usr/X11R6/include -I/local/include/X11
+INCDIR		= -I/local/include -I/usr/X11R6/include/X11 -I/local/include/X11
 LIBDIR		= -L/local/lib -L/usr/X11R6/lib -L/local/lib/X11
 EXTRA_LIBS	= -lXmu -lICE -lSM -lXext
 
@@ -41,15 +41,15 @@ endif
 ###########################################################################
 
 # Where do you want to install the program and the highscore file?
-INSTLIBDIR	= /var/local/lib/games
-INSTBINDIR	= /usr/local/games
-INSTMANDIR	= /usr/local/man/man6
+INSTLIBDIR	= $(DESTDIR)/var/games
+INSTBINDIR	= $(DESTDIR)/usr/games
+INSTMANDIR	= $(DESTDIR)/usr/share/man/man6
 #INSTLIBDIR	= /hom/sverrehu/lib
 #INSTBINDIR	= /hom/sverrehu/bin/$$HOSTTYPE
 #INSTMANDIR	= /hom/sverrehu/man/man6
 
 # Game user. Program runs suid, so this must not be root.
-OWNER		= games
+OWNER		= root
 GROUP		= games
 #OWNER		= sverrehu
 #GROUP		= sverrehu
@@ -70,7 +70,9 @@ OPTIM		= -s -O2
 CCOPT		= -Wall $(OPTIM) $(INCDIR) $(DEFINES) $(CFLAGS)
 LDOPT		= -s $(LIBDIR) $(LDFLAGS) $(EXTRA_LD_OPT)
 
-LIBS		= -lshhopt -lshhmsg -lXaw -lXt -lXpm -lX11 $(EXTRA_LIBS)
+# I wonder why -lshhopt and -lshhmsg fail?
+LIBS		= /usr/lib/libshhopt.so.1 /usr/lib/libshhmsg.so.1 \
+		  -lXaw -lXt -lXpm -lX11 $(EXTRA_LIBS)
 
 OBJS		= board.o fruit.o game.o gameobject.o headbanger.o \
 		  mushroom.o score.o scull.o slimpill.o snake.o \
@@ -89,15 +91,15 @@ $(PROG): $(OBJS)
 	$(CC) -o $@ -c $(CCOPT) $<
 
 clean:
-	rm -f *.o core depend *~
+	rm -f *.o core depend *~ $(PROG)
 
 install: $(PROG)
 	install -d -m 755 $(INSTBINDIR) $(INSTLIBDIR) $(INSTMANDIR)
-	install -s -m 4755 -o $(OWNER) -g $(GROUP) $(PROG) $(INSTBINDIR)
+	install -s -m 2755 -o $(OWNER) -g $(GROUP) $(PROG) $(INSTBINDIR)
 	ln -sf $(PROG) $(INSTBINDIR)/snake4scores
 	install -m 644 $(DIST).6 $(INSTMANDIR)
 	if test ! -f $(SCOREFILE); then \
-	  install -m 644 -o $(OWNER) -g $(GROUP) \
+	  install -m 664 -o $(OWNER) -g $(GROUP) \
 	          $(SCOREBASEFILE) $(INSTLIBDIR); fi
 
 depend dep:
