@@ -1,3 +1,26 @@
+snake4 (1.0.12-3) unstable; urgency=low
+
+  * QA Group upload orphaning this package
+  * debian/menu: quote the unquoted
+  * Incorporate previous NMU (closes: #170013)
+
+ -- Andrew Pollock <apollock@debian.org>  Tue,  9 Nov 2004 09:58:45 +1100
+
+snake4 (1.0.12-2.1) unstable; urgency=low
+
+  * NMU
+    - Moved Build-Depends from libxaw-dev to libxaw6-dev (Closes: #170013)
+    - Added proper information to debian/copyright
+
+ -- Javier Fernandez-Sanguino Pen~a <jfs@computer.org>  Fri,  9 Jan 2004 01:02:50 +0100
+
+snake4 (1.0.12-2) unstable; urgency=low
+
+  * Updated build-depends to libshhmsg1-dev and libshhopt1-dev
+    (Closes: #151100)
+
+ -- Karl Soderstrom <ks@debian.org>  Fri, 28 Jun 2002 19:08:38 +0200
+
 snake4 (1.0.12-1) unstable; urgency=low
 
   * New upstream release (with clarified license in README)
