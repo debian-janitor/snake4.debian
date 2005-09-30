@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Encoding=UTF-8
+Terminal=0
+Name=Snake4
+Icon=/usr/share/pixmaps/snake4.xpm
+GenericName=Snake4 Game
+Exec=/usr/games/snake4
+Categories=Application;Game;ArcadeGame
+Comment=Fruit-eating snake game
+

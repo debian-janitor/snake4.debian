@@ -1,3 +1,13 @@
+snake4 (1.0.12-5) unstable; urgency=low
+
+  * Updated debian/watch file.
+  * Added Ola as Uploader.
+  * Updated to Standards-Version: 3.6.2.
+  * Added snake4.xpm file, snake4.desktop file and updated menu file.
+  * Added debian/links file.
+
+ -- Jose Carlos Medeiros <debian@psabs.com.br>  Fri, 30 Sep 2005 14:09:26 -0300
+
 snake4 (1.0.12-4) unstable; urgency=low
 
   * New maintainer (Closes: #273706)
