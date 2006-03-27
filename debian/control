@@ -2,8 +2,8 @@ Source: snake4
 Section: games
 Priority: optional
 Maintainer: Jose Carlos Medeiros <debian@psabs.com.br>
-Uploaders: Ola Lundqvist <opal@debian.org>, Lionel Elie Mamane <lionel@mamane.lu>
-Build-Depends: debhelper (>= 4.0.0), libx11-dev, libxt-dev, x-dev, libxaw8-dev, libshhmsg1-dev, libshhopt1-dev
+Uploaders: Ola Lundqvist <opal@debian.org>
+Build-Depends: debhelper (>= 5), libx11-dev, libxt-dev, x-dev, libxaw7-dev, libshhmsg1-dev, libshhopt1-dev
 Standards-Version: 3.6.2
 
 Package: snake4
@@ -15,4 +15,5 @@ Description: Snake game
  and not crashing into your tail.
  .
  Features five levels of difficulty and a site-wide high score list.
-     
+ .
+ Homepage: http://shh.thathost.com/pub-unix/#snake4

@@ -1,3 +1,11 @@
+snake4 (1.0.12-7) unstable; urgency=low
+
+  * Removed debian/compat file and put DH_COMPAT line in rules file.
+  * Updated to DH_COMPAT=5.
+  * Changed depends from Xaw8 to Xaw7. (closes: #359309)
+
+ -- Jose Carlos Medeiros <debian@psabs.com.br>  Mon, 27 Mar 2006 16:43:10 -0300
+
 snake4 (1.0.12-6) unstable; urgency=low
 
   * Solved 'FTBFS: build-depends on removed xlibs-dev'. (Closes: #347089)
