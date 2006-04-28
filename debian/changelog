@@ -1,3 +1,10 @@
+snake4 (1.0.12-8) unstable; urgency=low
+
+  * Added libxmu-dev and libxpm-dev as Build-Depends. 
+  * Changed point from xpm.h to X11/xpm.h in score.c file. (closes: #365165)
+
+ -- Jose Carlos Medeiros <debian@psabs.com.br>  Fri, 28 Apr 2006 19:10:02 -0300
+
 snake4 (1.0.12-7) unstable; urgency=low
 
   * Removed debian/compat file and put DH_COMPAT line in rules file.
