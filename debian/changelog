@@ -1,3 +1,13 @@
+snake4 (1.0.12-10) unstable; urgency=low
+
+  * Removed "-s" option from install and ldd  in Makefile, to complain with 
+    nostrip build option (policy 10.1). (Closes: #438031)
+  * Solved debian-rules-ignores-make-clean-error Lintian.
+  * snake4.desktop: removed invalid "Application" category.
+  * snake4.menu: changed section to "Games/Puzzles".
+
+ -- Jose Carlos Medeiros <debian@psabs.com.br>  Fri, 21 Sep 2007 17:34:24 -0300
+
 snake4 (1.0.12-9) unstable; urgency=low
 
   * Bump Standards-Version: 3.7.2.

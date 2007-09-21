@@ -66,9 +66,9 @@ DEFINES		= -DVERSION=\"$(VERSION)\" \
 
 CC		= gcc
 
-OPTIM		= -s -O2
+OPTIM		= -O2
 CCOPT		= -Wall $(OPTIM) $(INCDIR) $(DEFINES) $(CFLAGS)
-LDOPT		= -s $(LIBDIR) $(LDFLAGS) $(EXTRA_LD_OPT)
+LDOPT		= $(LIBDIR) $(LDFLAGS) $(EXTRA_LD_OPT)
 
 # I wonder why -lshhopt and -lshhmsg fail?
 LIBS		= /usr/lib/libshhopt.so.1 /usr/lib/libshhmsg.so.1 \
@@ -95,7 +95,7 @@ clean:
 
 install: $(PROG)
 	install -d -m 755 $(INSTBINDIR) $(INSTLIBDIR) $(INSTMANDIR)
-	install -s -m 2755 -o $(OWNER) -g $(GROUP) $(PROG) $(INSTBINDIR)
+	install -m 2755 -o $(OWNER) -g $(GROUP) $(PROG) $(INSTBINDIR)
 	ln -sf $(PROG) $(INSTBINDIR)/snake4scores
 	install -m 644 $(DIST).6 $(INSTMANDIR)
 	if test ! -f $(SCOREFILE); then \
