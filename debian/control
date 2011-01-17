@@ -1,14 +1,14 @@
 Source: snake4
 Section: games
 Priority: optional
-Maintainer: Jose Carlos Medeiros <debian@psabs.com.br>
-Uploaders: Ola Lundqvist <opal@debian.org>
-Build-Depends: debhelper (>= 5), libx11-dev, libxt-dev, x-dev, libxaw7-dev, libshhmsg1-dev, libshhopt1-dev, libxmu-dev, libxpm-dev
-Standards-Version: 3.7.2
+Maintainer: Michael Boegl <m.b3941@web.de>
+Uploader: Sverre H. Huseby <shh@thathost.com>
+Build-Depends: debhelper (>= 5), libx11-dev, libxt-dev, libxaw7-dev, libshhmsg1-dev, libshhopt1-dev, libxmu-dev, libxpm-dev
+Standards-Version: 3.9.1
 
 Package: snake4
 Architecture: any
-Depends: ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Snake game
  This is a basic but nice implementation of the snake game. The objective
  is to "snake around" and eat fruit, while avoiding the evil headbanger
@@ -16,4 +16,4 @@ Description: Snake game
  .
  Features five levels of difficulty and a site-wide high score list.
  .
-  Homepage: http://shh.thathost.com/pub-unix/#snake4
+Homepage: http://shh.thathost.com/pub-unix/#snake4
