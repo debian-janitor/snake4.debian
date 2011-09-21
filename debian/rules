@@ -55,6 +55,10 @@ binary-arch: build-stamp
 	dh_strip
 	dh_compress
 	dh_fixperms
+	chown root:games debian/snake4/var/games/snake4
+	chmod 755 debian/snake4/var/games/snake4
+	chown root:games debian/snake4/usr/games/snake4
+	chmod 2755 debian/snake4/usr/games/snake4
 	dh_installdeb
 	dh_shlibdeps
 	dh_gencontrol
