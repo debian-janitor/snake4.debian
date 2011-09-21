@@ -1,2 +1,2 @@
-?package(snake4):needs=X11 section=Games/Arcade\
+?package(snake4):needs="X11" section="Games/Arcade"\
   title="Snake4" command="/usr/games/snake4"
