@@ -8,8 +8,9 @@ snake4 (1.0.12-14) unstable; urgency=low
   - add build-arch/build-indep
   - use dh_install instead of manual cp and heavily patched Makefile
   - use dpkg-buildflags
+  * install default score file
 
- -- Bernhard R. Link <brlink@debian.org>  Wed, 21 Sep 2011 15:00:05 +0200
+ -- Bernhard R. Link <brlink@debian.org>  Wed, 21 Sep 2011 15:15:31 +0200
 
 snake4 (1.0.12-13) unstable; urgency=low
 

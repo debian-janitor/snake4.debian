@@ -19,18 +19,10 @@ set -e
 
 case "$1" in
 	configure)
-	  # Move high score file
-	  if [ -f /var/lib/games/snake4.score ]; then
-	    mv -f /var/lib/games/snake4.score /var/games/snake4
-	  fi
 	  # if score file is empty, create one.
 	  if [ ! -f /var/games/snake4/snake4.score ]; then
-	    echo '1' > /var/games/snake4/snake4.score;
-	    echo 'sverrehu,Sverre H. Huseby,117474,4,1996-10-10 20:31:11' >> \
-		/var/games/snake4/snake4.score
+	    install -o root -g games -m 664 /usr/share/games/snake4/snake4.score /var/games/snake4/snake4.score
 	  fi
-	  chown root:games /var/games/snake4/snake4.score;
-	  chmod 664 /var/games/snake4/snake4.score;
 	  dpkg-statoverride --add --force --update root games 2755 \
 		/usr/games/snake4;
 	;;

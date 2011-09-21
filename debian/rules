@@ -26,7 +26,8 @@ build-stamp:
 		EXTRA_LIBS='' \
 		COMPILED_BY='Debian' \
 		COMPILED_DATE="`date '+%Y-%m-%d %H:%M:%S'`" \
-		HOSTTYPE='Debian'
+		HOSTTYPE='Debian' \
+		all snake4.score
 	touch build-stamp
 
 clean:
