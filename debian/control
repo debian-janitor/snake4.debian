@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Jose Carlos Medeiros <debian@psabs.com.br>
 Uploaders: Ola Lundqvist <opal@debian.org>
 Build-Depends: debhelper (>= 5), libx11-dev, libxt-dev, x-dev, libxaw7-dev, libshhmsg1-dev, libshhopt1-dev, libxmu-dev, libxpm-dev
-Standards-Version: 3.6.2
+Standards-Version: 3.7.2
 
 Package: snake4
 Architecture: any
@@ -16,4 +16,4 @@ Description: Snake game
  .
  Features five levels of difficulty and a site-wide high score list.
  .
- Homepage: http://shh.thathost.com/pub-unix/#snake4
+  Homepage: http://shh.thathost.com/pub-unix/#snake4

@@ -1,3 +1,10 @@
+snake4 (1.0.12-9) unstable; urgency=low
+
+  * Bump Standards-Version: 3.7.2.
+  * DH_COMPAT = 5
+
+ -- Jose Carlos Medeiros <debian@psabs.com.br>  Thu, 17 May 2007 23:32:14 -0300
+
 snake4 (1.0.12-8) unstable; urgency=low
 
   * Added libxmu-dev and libxpm-dev as Build-Depends. 
