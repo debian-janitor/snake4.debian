@@ -7,6 +7,6 @@ Name=Snake4
 Icon=/usr/share/pixmaps/snake4.xpm
 GenericName=Snake4 Game
 Exec=/usr/games/snake4
-Categories=Application;Game;ArcadeGame
+Categories=Game;ArcadeGame
 Comment=Fruit-eating snake game
 
