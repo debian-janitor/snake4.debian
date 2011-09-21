@@ -34,11 +34,8 @@ binary-arch: build-stamp
 	dh_prep
 	dh_installdirs
 	$(MAKE) install DESTDIR=$(CURDIR)/debian/snake4
-	cp debian/snake4.xpm \
-		$(CURDIR)/debian/snake4/usr/share/pixmaps;
-	cp debian/snake4.desktop \
-		$(CURDIR)/debian/snake4/usr/share/applications;
-	rm -f debian/snake4/var/games/snake4.score;
+	rm -f debian/snake4/var/games/snake4.score
+	dh_install
 	dh_installchangelogs ChangeLog
 	dh_installdocs
 	dh_installmenu
