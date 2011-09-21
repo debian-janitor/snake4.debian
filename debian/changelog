@@ -1,3 +1,9 @@
+snake4 (1.0.12-6) unstable; urgency=low
+
+  * Solved 'FTBFS: build-depends on removed xlibs-dev'. (Closes: #347089)
+
+ -- Jose Carlos Medeiros <debian@psabs.com.br>  Mon, 16 Jan 2006 20:51:09 -0200
+
 snake4 (1.0.12-5) unstable; urgency=low
 
   * Updated debian/watch file.
