@@ -1,3 +1,10 @@
+snake4 (1.0.12-11) unstable; urgency=low
+
+  * debian/menu: changed section to Games/Action, thanks to Bill Allombert.
+    (Closes: #444893)
+
+ -- Jose Carlos Medeiros <debian@psabs.com.br>  Sat, 03 Nov 2007 01:29:27 +0000
+
 snake4 (1.0.12-10) unstable; urgency=low
 
   * Removed "-s" option from install and ldd  in Makefile, to complain with 
