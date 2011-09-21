@@ -70,7 +70,6 @@ binary-arch: build install
 	dh_installinfo
 	dh_installman
 	dh_link 
-	dh_desktop
 	dh_strip
 	dh_compress
 	dh_fixperms

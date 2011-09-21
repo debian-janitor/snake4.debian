@@ -1,3 +1,17 @@
+snake4 (1.0.12-13) unstable; urgency=low
+
+  * compiler warnings removed in score.c
+  * made lintian clean for 3.9.1
+  * Uploader removed upon mail request
+
+ -- Michael Boegl <m.b3941@web.de>  Mon, 17 Jan 2011 09:34:24 +0100
+
+snake4 (1.0.12-12) unstable; urgency=low
+
+  * New maintainer (Closes: #581387)
+
+ -- Michael Boegl <m.b3941@web.de>  Sun, 16 Jan 2011 17:12:44 +0100
+
 snake4 (1.0.12-11) unstable; urgency=low
 
   * debian/menu: changed section to Games/Action, thanks to Bill Allombert.
