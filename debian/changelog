@@ -11,8 +11,9 @@ snake4 (1.0.12-14) unstable; urgency=low
   * install default score file
   * don't misuse dpkg-statoverride
   * Standards-Version to 3.9.2
+  * add Vcs-*
 
- -- Bernhard R. Link <brlink@debian.org>  Wed, 21 Sep 2011 15:39:41 +0200
+ -- Bernhard R. Link <brlink@debian.org>  Wed, 21 Sep 2011 15:43:40 +0200
 
 snake4 (1.0.12-13) unstable; urgency=low
 
