@@ -1,2 +1,3 @@
 debian/snake4.xpm /usr/share/pixmaps/
 debian/snake4.desktop /usr/share/applications/
+snake4	/usr/games/

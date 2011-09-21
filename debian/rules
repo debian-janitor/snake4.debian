@@ -3,26 +3,36 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-CFLAGS = -Wall -g
-
-ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
-	CFLAGS += -O0
-else
-	CFLAGS += -O2
+ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+MAKEFLAGS += -j$(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 endif
+
+CFLAGS              := $(shell dpkg-buildflags --get CFLAGS)
+CPPFLAGS            := $(shell dpkg-buildflags --get CPPFLAGS)
+LDFLAGS             := $(shell dpkg-buildflags --get LDFLAGS)
+
+LDFLAGS += -Wl,-z,defs
 
 build-arch: build-stamp
 build-indep:
 
 build-stamp:
 	dh_testdir
-	$(MAKE) INSTLIBDIR=/var/games/snake4
+	$(MAKE) INSTLIBDIR=/var/games/snake4 \
+		INCDIR='$(CPPFLAGS)' \
+		CFLAGS='$(CFLAGS)' \
+		LDOPT='$(LDFLAGS)' \
+		OPTIM='' \
+		EXTRA_LIBS='' \
+		COMPILED_BY='Debian' \
+		COMPILED_DATE="`date '+%Y-%m-%d %H:%M:%S'`" \
+		HOSTTYPE='Debian'
 	touch build-stamp
 
 clean:
 	dh_testdir
 	dh_testroot
-	rm -f build-stamp
+	rm -f build-stamp snake4
 	$(MAKE) clean
 	dh_clean
 
@@ -33,8 +43,6 @@ binary-arch: build-stamp
 	dh_testroot
 	dh_prep
 	dh_installdirs
-	$(MAKE) install DESTDIR=$(CURDIR)/debian/snake4
-	rm -f debian/snake4/var/games/snake4.score
 	dh_install
 	dh_installchangelogs ChangeLog
 	dh_installdocs
