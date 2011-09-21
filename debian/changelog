@@ -1,3 +1,14 @@
+snake4 (1.0.12-4) unstable; urgency=low
+
+  * New maintainer (Closes: #273706)
+  * Added compat, watch and postrm file.
+  * Updated control, rules and postinst files to complain with debhelper 4.
+  * Updated license in debian/copyright file.
+  * Changed var/lib/games to var/games/snake4 in dirs file.
+  * Deleted conffile file.
+
+ -- Jose Carlos Medeiros <debian@psabs.com.br>  Fri,  1 Jul 2005 15:10:16 -0300
+
 snake4 (1.0.12-3) unstable; urgency=low
 
   * QA Group upload orphaning this package
