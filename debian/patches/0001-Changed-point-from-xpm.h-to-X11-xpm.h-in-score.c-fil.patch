@@ -1,4 +1,4 @@
-From ce9b5a9673e4e494943c56147a370a8e03dbc82e Mon Sep 17 00:00:00 2001
+From 8f3eab454ea22d4811322bee2d6ff7689d42aec5 Mon Sep 17 00:00:00 2001
 From: Jose Carlos Medeiros <debian@psabs.com.br>
 Date: Fri, 28 Apr 2006 19:10:02 -0300
 Subject: Changed point from xpm.h to X11/xpm.h in score.c file.

@@ -7,8 +7,9 @@ snake4 (1.0.12-14) unstable; urgency=low
   * modernize debian/rules
   - add build-arch/build-indep
   - use dh_install
+  * drop changes to upstream Makefile
 
- -- Bernhard R. Link <brlink@debian.org>  Wed, 21 Sep 2011 14:16:48 +0200
+ -- Bernhard R. Link <brlink@debian.org>  Wed, 21 Sep 2011 14:35:18 +0200
 
 snake4 (1.0.12-13) unstable; urgency=low
 

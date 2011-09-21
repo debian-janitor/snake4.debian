@@ -1,4 +1,4 @@
-From 66977efb6f2a3e06505ebf53d95953788b08fef0 Mon Sep 17 00:00:00 2001
+From 63bf66f4ace9cff709365f2d71545deda57e39f7 Mon Sep 17 00:00:00 2001
 From: Michael Boegl <m.b3941@web.de>
 Date: Mon, 17 Jan 2011 09:34:24 +0100
 Subject: compiler warnings removed in score.c

@@ -1,4 +1,4 @@
-From fa28c4ec34bf30d6255cd762c4859a7be6fe6eb3 Mon Sep 17 00:00:00 2001
+From 53315c433061deddf946649284ac1969aad20478 Mon Sep 17 00:00:00 2001
 From: Michael Boegl <m.b3941@web.de>
 Date: Mon, 17 Jan 2011 09:34:24 +0100
 Subject: fix minus/hyphen in manpage
