@@ -1,10 +1,4 @@
 #!/usr/bin/make -f
-# -*- makefile -*-
-# Sample debian/rules that uses debhelper.
-# This file was originally written by Joey Hess and Craig Small.
-# As a special exception, when this file is copied by dh-make into a
-# dh-make output file, you may use that output file without restriction.
-# This special exception was added by Craig Small in version 0.37 of dh-make.
 
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
@@ -17,59 +11,41 @@ else
 	CFLAGS += -O2
 endif
 
-configure: configure-stamp
-configure-stamp:
-	dh_testdir
-	# Add here commands to configure the package.
-	touch configure-stamp
+build-arch: build-stamp
+build-indep:
 
-build: build-stamp
-
-build-stamp: configure-stamp 
+build-stamp:
 	dh_testdir
-	# Add here commands to compile the package.
 	$(MAKE) INSTLIBDIR=/var/games/snake4
 	touch build-stamp
 
 clean:
 	dh_testdir
 	dh_testroot
-	rm -f build-stamp configure-stamp
+	rm -f build-stamp
+	$(MAKE) clean
+	dh_clean
 
-	# Add here commands to clean up after the build process.
-	[ ! -f Makefile ] || $(MAKE) clean
+binary-indep:
 
-	dh_clean 
-
-install: build
+binary-arch: build-stamp
 	dh_testdir
 	dh_testroot
 	dh_prep
 	dh_installdirs
-
-	# Add here commands to install the package into debian/snake4.
 	$(MAKE) install DESTDIR=$(CURDIR)/debian/snake4
 	cp debian/snake4.xpm \
 		$(CURDIR)/debian/snake4/usr/share/pixmaps;
 	cp debian/snake4.desktop \
 		$(CURDIR)/debian/snake4/usr/share/applications;
 	rm -f debian/snake4/var/games/snake4.score;
-
-# Build architecture-independent files here.
-binary-indep: build install
-# We have nothing to do by default.
-
-# Build architecture-dependent files here.
-binary-arch: build install
-	dh_testdir
-	dh_testroot
-	dh_installchangelogs ChangeLog 
+	dh_installchangelogs ChangeLog
 	dh_installdocs
 	dh_installmenu
 	dh_installdebconf
 	dh_installinfo
 	dh_installman
-	dh_link 
+	dh_link
 	dh_strip
 	dh_compress
 	dh_fixperms
@@ -80,5 +56,6 @@ binary-arch: build install
 	dh_builddeb
 
 binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install configure
+build: build-arch build-indep
+.PHONY: build build-arch build-indep clean binary-indep binary-arch binary
 
