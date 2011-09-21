@@ -1,0 +1,5 @@
+0001-changes-in-snake4_1.0.12-1.diff.gz.patch
+0002-Changed-point-from-xpm.h-to-X11-xpm.h-in-score.c-fil.patch
+0003-Removed-s-option-from-install-and-ldd-in-Makefile.patch
+0004-compiler-warnings-removed-in-score.c.patch
+0005-fix-minus-hyphen-in-manpage.patch

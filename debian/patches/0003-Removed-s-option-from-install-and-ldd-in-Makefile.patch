@@ -1,0 +1,37 @@
+From fa5171eb2b304cee3165badb6c712783c8b3ffbe Mon Sep 17 00:00:00 2001
+From: Jose Carlos Medeiros <debian@psabs.com.br>
+Date: Fri, 21 Sep 2007 17:34:24 -0300
+Subject: Removed "-s" option from install and ldd in Makefile,
+
+to comply with nostrip build option (policy 10.1).
+
+Bug-Debian: http://bugs.debian.org/438031
+---
+ Makefile |    6 +++---
+ 1 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 159c13c..b595858 100644
+--- a/Makefile
++++ b/Makefile
+@@ -66,9 +66,9 @@ DEFINES		= -DVERSION=\"$(VERSION)\" \
+ 
+ CC		= gcc
+ 
+-OPTIM		= -s -O2
++OPTIM		= -O2
+ CCOPT		= -Wall $(OPTIM) $(INCDIR) $(DEFINES) $(CFLAGS)
+-LDOPT		= -s $(LIBDIR) $(LDFLAGS) $(EXTRA_LD_OPT)
++LDOPT		= $(LIBDIR) $(LDFLAGS) $(EXTRA_LD_OPT)
+ 
+ # I wonder why -lshhopt and -lshhmsg fail?
+ LIBS		= /usr/lib/libshhopt.so.1 /usr/lib/libshhmsg.so.1 \
+@@ -95,7 +95,7 @@ clean:
+ 
+ install: $(PROG)
+ 	install -d -m 755 $(INSTBINDIR) $(INSTLIBDIR) $(INSTMANDIR)
+-	install -s -m 2755 -o $(OWNER) -g $(GROUP) $(PROG) $(INSTBINDIR)
++	install -m 2755 -o $(OWNER) -g $(GROUP) $(PROG) $(INSTBINDIR)
+ 	ln -sf $(PROG) $(INSTBINDIR)/snake4scores
+ 	install -m 644 $(DIST).6 $(INSTMANDIR)
+ 	if test ! -f $(SCOREFILE); then \
