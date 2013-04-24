@@ -1,3 +1,13 @@
+snake4 (1.0.12-15) experimental; urgency=low
+
+  * New mantainer (Closes: #581387)
+  * debian/copyright: complied to the 3.9.4 format
+  * debhelper compatibility up to 9
+  * debian/rules: modernized
+  * debian/control: Standards-Version to 3.9.4
+
+ -- Alexandre Dantas <alex.dantas92@gmail.com>  Wed, 24 Apr 2013 11:20:30 -0300
+
 snake4 (1.0.12-14) unstable; urgency=low
 
   * QA upload, incorporating old package found on mentors.debian.org

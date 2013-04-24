@@ -3,10 +3,6 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
-MAKEFLAGS += -j$(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
-endif
-
 CFLAGS              := $(shell dpkg-buildflags --get CFLAGS)
 CPPFLAGS            := $(shell dpkg-buildflags --get CPPFLAGS)
 LDFLAGS             := $(shell dpkg-buildflags --get LDFLAGS)

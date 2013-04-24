@@ -1,10 +1,12 @@
 Source: snake4
 Section: games
 Priority: optional
-Maintainer: Debian QA Group <packages@qa.debian.org>
-Build-Depends: debhelper (>= 7), libx11-dev, libxt-dev, libxaw7-dev, libshhmsg1-dev, libshhopt1-dev, libxmu-dev, libxpm-dev
-Standards-Version: 3.9.2
-Vcs-Browser: http://anonscm.debian.org/git/collab-maint/snake4.git
+Maintainer: Alexandre Dantas <alex.dantas92@gmail.com>
+Build-Depends: debhelper (>= 9), libx11-dev, libxt-dev, libxaw7-dev, 
+ libshhmsg1-dev, libshhopt1-dev, libxmu-dev, libxpm-dev
+Standards-Version: 3.9.4
+Homepage: http://shh.thathost.com/pub-unix/#snake4
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/snake4.git
 Vcs-Git: git://anonscm.debian.org/collab-maint/snake4.git
 
 Package: snake4
@@ -16,4 +18,6 @@ Description: Snake game
  and not crashing into your tail.
  .
  Features five levels of difficulty and a site-wide high score list.
-Homepage: http://shh.thathost.com/pub-unix/#snake4
+ .
+ Screenshot: http://screenshots.debian.net/screenshots/s/snake4/1555_large.png
+
