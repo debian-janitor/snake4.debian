@@ -1,0 +1,36 @@
+Description: Applied hardening flags to compilation process
+Author: Alexandre Dantas <alex.dantas92@gmail.com>
+Last-Update: 2013-04-25--- a/Makefile
++++ b/Makefile
+@@ -7,7 +7,8 @@
+ VERSION		= $(VERMAJ).$(VERMIN).$(VERPAT)
+ COMPILED_DATE	= `date '+%Y-%m-%d %H:%M:%S'`
+ COMPILED_BY	= `whoami`
+-
++HOSTTYPE        = 'Debian'
++
+ ###########################################################################
+ 
+ # Where are shhmsg, shhopt, Xpm and X11?
+@@ -15,7 +15,6 @@
+ # GNU/Linux at home
+ INCDIR		= -I/local/include -I/usr/X11R6/include -I/local/include/X11
+ LIBDIR		= -L/local/lib -L/usr/X11R6/lib -L/local/lib/X11
+-EXTRA_LIBS	= -lXmu -lICE -lSM -lXext
+ 
+ # Irix at Ifi
+ ifeq ($(HOSTTYPE),sgi)
+@@ -65,9 +64,12 @@
+ ###########################################################################
+ 
+ CC		= gcc
++CFLAGS          = $(shell dpkg-buildflags --get CFLAGS)
++CPPFLAGS        = $(shell dpkg-buildflags --get CPPFLAGS)
++LDFLAGS         = $(shell dpkg-buildflags --get LDFLAGS) -Wl,-z,defs
+ 
+ OPTIM		= -s -O2
+-CCOPT		= -Wall $(OPTIM) $(INCDIR) $(DEFINES) $(CFLAGS)
++CCOPT		= -Wall $(OPTIM) $(INCDIR) $(CPPFLAGS) $(DEFINES) $(CFLAGS)
+ LDOPT		= -s $(LIBDIR) $(LDFLAGS) $(EXTRA_LD_OPT)
+ 
+ LIBS		= -lshhopt -lshhmsg -lXaw -lXt -lXpm -lX11 $(EXTRA_LIBS)

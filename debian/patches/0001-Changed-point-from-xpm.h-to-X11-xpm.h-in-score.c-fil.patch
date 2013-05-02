@@ -1,0 +1,23 @@
+From 8f3eab454ea22d4811322bee2d6ff7689d42aec5 Mon Sep 17 00:00:00 2001
+From: Jose Carlos Medeiros <debian@psabs.com.br>
+Date: Fri, 28 Apr 2006 19:10:02 -0300
+Subject: Changed point from xpm.h to X11/xpm.h in score.c file.
+
+Bug-Debian: http://bugs.debian.org/365165
+---
+ board.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/board.c b/board.c
+index 46df53e..bb7c37d 100644
+--- a/board.c
++++ b/board.c
+@@ -32,7 +32,7 @@
+ #include "board.h"
+ 
+ /* must be last to avoid redefinition of Pixel */
+-#include <xpm.h>
++#include <X11/xpm.h>
+ 
+ 
+ 
