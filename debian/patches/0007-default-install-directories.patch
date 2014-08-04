@@ -1,0 +1,16 @@
+Description: Changed default install directories to standard ones
+Author: Alexandre Dantas
+Last-Update: 2014-08-04
+--- a/Makefile
++++ b/Makefile
+@@ -42,8 +42,8 @@
+ 
+ # Where do you want to install the program and the highscore file?
+ INSTLIBDIR	= /var/games
+-INSTBINDIR	= /usr/local/games
+-INSTMANDIR	= /usr/local/man/man6
++INSTBINDIR	= /usr/games
++INSTMANDIR	= /usr/share/man/man6
+ #INSTLIBDIR	= /hom/sverrehu/lib
+ #INSTBINDIR	= /hom/sverrehu/bin/$$HOSTTYPE
+ #INSTMANDIR	= /hom/sverrehu/man/man6
