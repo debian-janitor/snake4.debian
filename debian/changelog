@@ -1,3 +1,9 @@
+snake4 (1.0.12-17) unstable; urgency=low
+
+  * Bump Standards-Version to 3.9.5 (no changes needed)
+
+ -- Alexandre Dantas <eu@alexdantas.net>  Mon, 04 Aug 2014 19:25:36 -0400
+
 snake4 (1.0.12-16) unstable; urgency=low
 
   * Rebuild to unstable
