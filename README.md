@@ -1,4 +1,4 @@
-# snake4.debian
+	# snake4.debian
 
 This repository contains the **Debian packaging files** for the game
 Snake4 (_basic but nice implementation of the snake game_).
@@ -60,6 +60,6 @@ $ git checkout -b master
 2. [Workaround.org has a nice article][article] on co-maintaining
 a Debian package with Git and `git-buildpackage`.
 
-[home]:    http://shh.thathost.com/pub-unix/#snake4
+[home]:    http://shh.thathost.com/pub-unix/html/snake4.html
 [package]: https://tracker.debian.org/pkg/snake4
 [article]: https://workaround.org/debian-git-comaintenance
