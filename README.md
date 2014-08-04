@@ -1,26 +1,26 @@
-# xbomb.debian
+# snake4.debian
 
 This repository contains the **Debian packaging files** for the game
-Xbomb (_a 'minesweeper' game with squares, hexagons or triangles_).
+Snake4 (_basic but nice implementation of the snake game_).
 
-If you're after the game Xbomb itself, [go to it's homepage][home]
+If you're after the game Snake4 itself, [go to it's homepage][home]
 
-![screen](http://www.gedanken.org.uk/software/xbomb/hexagon.png)
+![screen](http://screenshots.debian.net/screenshots/s/snake4/1555_large.png)
 
 ## Debian Packaging
 
 ### Structure
 
-* [**Xbomb on Debian Package Tracking System**][package]
+* [**Snake4 on Debian Package Tracking System**][package]
 
 This package is maintained on a Git repository through some important branches.
 
 | branch                                                                            | role |
 | --------------------------------------------------------------------------------- | ---- |
-| [**master**](https://github.com/alexdantas/xbomb.debian/tree/master)            | Xbomb _and_ the debian package source code (`debian` directory) |
-| [**upstream**](https://github.com/alexdantas/xbomb.debian/tree/upstream)        | Everything that was on the original upstream tarball (`orig.tar.gz`) |
-| [**pristine-tar**](https://github.com/alexdantas/xbomb.debian/tree/pristine-tar)| Debian original tarball |
-| [**readme**](https://github.com/alexdantas/xbomb.debian/tree/readme)            | This single file, explaining all that |
+| [**master**](https://github.com/alexdantas/snake4.debian/tree/master)            | Snake4 _and_ the debian package source code (`debian` directory) |
+| [**upstream**](https://github.com/alexdantas/snake4.debian/tree/upstream)        | Everything that was on the original upstream tarball (`orig.tar.gz`) |
+| [**pristine-tar**](https://github.com/alexdantas/snake4.debian/tree/pristine-tar)| Debian original tarball |
+| [**readme**](https://github.com/alexdantas/snake4.debian/tree/readme)            | This single file, explaining all that |
 
 
 ### Getting Started
@@ -30,7 +30,7 @@ To start working on this package, clone this repository
 
 ```bash
 # Cloning the entire repository
-$ git clone https://github.com/alexdantas/xbomb.debian
+$ git clone https://github.com/alexdantas/snake4.debian
 
 # For now you have only the `readme` branch
 $ git branch
@@ -60,6 +60,6 @@ $ git checkout -b master
 2. [Workaround.org has a nice article][article] on co-maintaining
 a Debian package with Git and `git-buildpackage`.
 
-[home]:    http://www.gedanken.org.uk/software/xbomb/
-[package]: https://packages.qa.debian.org/x/xbomb.html
+[home]:    http://shh.thathost.com/pub-unix/#snake4
+[package]: https://tracker.debian.org/pkg/snake4
 [article]: https://workaround.org/debian-git-comaintenance
