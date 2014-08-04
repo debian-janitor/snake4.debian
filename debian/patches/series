@@ -3,5 +3,4 @@
 0003-fix-minus-hyphen-in-manpage.patch
 0004-hardening-flags-to-compiler.patch
 0005-make-clean-now-removes-executable.patch
-0006-high-score-directory-is-var-games.patch
-0007-default-install-directories.patch
+0006-standard-install-directories.patch

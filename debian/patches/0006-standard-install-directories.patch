@@ -3,14 +3,16 @@ Author: Alexandre Dantas
 Last-Update: 2014-08-04
 --- a/Makefile
 +++ b/Makefile
-@@ -42,8 +42,8 @@
+@@ -41,9 +41,9 @@
+ ###########################################################################
  
  # Where do you want to install the program and the highscore file?
- INSTLIBDIR	= /var/games
+-INSTLIBDIR	= /var/local/lib/games
 -INSTBINDIR	= /usr/local/games
 -INSTMANDIR	= /usr/local/man/man6
-+INSTBINDIR	= $(DESTDIR)$(PREFIX)/games
-+INSTMANDIR	= $(DESTDIR)$(PREFIX)/share/man/man6
++INSTLIBDIR	= $(DESTDIR)/var/games
++INSTBINDIR	= $(DESTDIR)/usr/games
++INSTMANDIR	= $(DESTDIR)/usr/share/man/man6
  #INSTLIBDIR	= /hom/sverrehu/lib
  #INSTBINDIR	= /hom/sverrehu/bin/$$HOSTTYPE
  #INSTMANDIR	= /hom/sverrehu/man/man6
