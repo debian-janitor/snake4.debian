@@ -1,6 +1,7 @@
 Description: Changed default high score directory from /var/local/lib/games to /var/games on Makefile.
 Author: Alexandre Dantas
-Last-Update: 2013-05-02--- a/Makefile
+Last-Update: 2013-05-02
+--- a/Makefile
 +++ b/Makefile
 @@ -55,7 +55,7 @@
  #GROUP		= sverrehu

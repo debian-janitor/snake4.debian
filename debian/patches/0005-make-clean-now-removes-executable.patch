@@ -1,6 +1,7 @@
 Description: Made 'make clean' also remove the final executable on build directory.
 Author: Alexandre Dantas <alex.dantas92@gmail.com>
-Last-Update: 2013-04-25--- a/Makefile
+Last-Update: 2013-04-25
+--- a/Makefile
 +++ b/Makefile
 @@ -92,7 +92,7 @@
  	$(CC) -o $@ -c $(CCOPT) $<
