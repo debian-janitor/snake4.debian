@@ -9,8 +9,8 @@ Last-Update: 2014-08-04
  INSTLIBDIR	= /var/games
 -INSTBINDIR	= /usr/local/games
 -INSTMANDIR	= /usr/local/man/man6
-+INSTBINDIR	= /usr/games
-+INSTMANDIR	= /usr/share/man/man6
++INSTBINDIR	= $(DESTDIR)$(PREFIX)/games
++INSTMANDIR	= $(DESTDIR)$(PREFIX)/share/man/man6
  #INSTLIBDIR	= /hom/sverrehu/lib
  #INSTBINDIR	= /hom/sverrehu/bin/$$HOSTTYPE
  #INSTMANDIR	= /hom/sverrehu/man/man6
