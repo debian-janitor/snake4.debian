@@ -1,14 +1,23 @@
 Description: Changed default high score directory from /var/local/lib/games to /var/games on Makefile.
 Author: Alexandre Dantas
-Last-Update: 2013-05-02
+Last-Update: 2014-08-04
 --- a/Makefile
 +++ b/Makefile
-@@ -55,7 +55,7 @@
- #GROUP		= sverrehu
+@@ -41,7 +41,7 @@
+ ###########################################################################
  
- SCOREBASEFILE	= $(PROG).score
--SCOREFILE	= $(INSTLIBDIR)/$(SCOREBASEFILE)
-+SCOREFILE	= /var/games/$(SCOREBASEFILE)
- DEFINES		= -DVERSION=\"$(VERSION)\" \
- 		  "-DCOMPILED_DATE=\"$(COMPILED_DATE)\"" \
- 		  "-DCOMPILED_BY=\"$(COMPILED_BY)\"" \
+ # Where do you want to install the program and the highscore file?
+-INSTLIBDIR	= /var/local/lib/games
++INSTLIBDIR	= /var/games
+ INSTBINDIR	= /usr/local/games
+ INSTMANDIR	= /usr/local/man/man6
+ #INSTLIBDIR	= /hom/sverrehu/lib
+@@ -101,7 +101,7 @@
+ 	install -m 644 $(DIST).6 $(INSTMANDIR)
+ 	if test ! -f $(SCOREFILE); then \
+ 	  install -m 644 -o $(OWNER) -g $(GROUP) \
+-	          $(SCOREBASEFILE) $(INSTLIBDIR); fi
++	          $(SCOREBASEFILE); fi
+ 
+ depend dep:
+ 	$(CC) $(INCDIR) -MM *.c >depend
