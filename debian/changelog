@@ -1,6 +1,8 @@
 snake4 (1.0.12-17) unstable; urgency=low
 
   * Bump Standards-Version to 3.9.5 (no changes needed)
+  * Merged patches to install files on standard locations
+  * Updated maintainer contact information
 
  -- Alexandre Dantas <eu@alexdantas.net>  Mon, 04 Aug 2014 19:25:36 -0400
 
