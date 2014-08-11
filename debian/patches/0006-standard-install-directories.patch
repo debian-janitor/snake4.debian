@@ -1,5 +1,5 @@
 Description: Changed default install directories to standard ones
-Author: Alexandre Dantas
+Author: Alexandre Dantas <eu@alexdantas.net>
 Last-Update: 2014-08-04
 --- a/Makefile
 +++ b/Makefile

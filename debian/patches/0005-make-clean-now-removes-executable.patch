@@ -1,5 +1,5 @@
 Description: Made 'make clean' also remove the final executable on build directory.
-Author: Alexandre Dantas <alex.dantas92@gmail.com>
+Author: Alexandre Dantas <eu@alexdantas.net>
 Last-Update: 2013-04-25
 --- a/Makefile
 +++ b/Makefile

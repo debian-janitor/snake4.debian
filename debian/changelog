@@ -10,7 +10,7 @@ snake4 (1.0.12-16) unstable; urgency=low
 
   * Rebuild to unstable
 
- -- Alexandre Dantas <alex.dantas92@gmail.com>  Thu, 02 May 2013 10:09:46 -0300
+ -- Alexandre Dantas <eu@alexdantas.net>  Thu, 02 May 2013 10:09:46 -0300
 
 snake4 (1.0.12-15) experimental; urgency=low
 
@@ -21,7 +21,7 @@ snake4 (1.0.12-15) experimental; urgency=low
   * debian/rules: started using dh --parallel
   * Added a patch to fix hardening issues on compilation
 
- -- Alexandre Dantas <alex.dantas92@gmail.com>  Wed, 24 Apr 2013 11:20:30 -0300
+ -- Alexandre Dantas <eu@alexdantas.net>  Wed, 24 Apr 2013 11:20:30 -0300
 
 snake4 (1.0.12-14) unstable; urgency=low
 
