@@ -1,3 +1,0 @@
-?package(snake4):needs="X11" section="Games/Action"\
-  title="Snake4" command="/usr/games/snake4"\
-  icon="/usr/share/pixmaps/snake4.xpm"
