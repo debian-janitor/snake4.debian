@@ -1,0 +1,16 @@
+#! /bin/sh
+
+set -e
+
+case "$1" in
+	configure)
+	  # if score file is empty, create one.
+	  if [ ! -f /var/games/snake4/snake4.score ]; then
+	    install -o root -g games -m 664 /usr/share/games/snake4/snake4.score /var/games/snake4/snake4.score
+	  fi
+	;;
+esac
+
+#DEBHELPER#
+
+exit 0
