@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+%:
+	dh $@ --parallel
+
+override_dh_fixperms:
+	chown 'root:games' debian/snake4/usr/games/snake4
+	chmod 2755 debian/snake4/usr/games/snake4
+	chown 'root:games' debian/snake4/var/games/snake4.score
+	chmod 664 debian/snake4/var/games/snake4.score
+	dh_fixperms -Xdebian/snake4/usr/games/snake4 -Xdebian/snake4/var/games/snake4.score

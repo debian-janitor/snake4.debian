@@ -1,0 +1,33 @@
+From 63bf66f4ace9cff709365f2d71545deda57e39f7 Mon Sep 17 00:00:00 2001
+From: Michael Boegl <m.b3941@web.de>
+Date: Mon, 17 Jan 2011 09:34:24 +0100
+Subject: compiler warnings removed in score.c
+
+---
+ score.c |   11 +++++++----
+ 1 files changed, 7 insertions(+), 4 deletions(-)
+
+diff --git a/score.c b/score.c
+index 44506a9..824b148 100644
+--- a/score.c
++++ b/score.c
+@@ -509,12 +509,15 @@ scoreMergeScoreFile(char *file)
+     if (fgets(line, sizeof(line), merge) == NULL)
+ 	goto unlock;
+     n = atoi(line);
+-    for (q = 0; q < n; q++)
+-        if ((hs = scoreReadScoreLine(merge)) != NULL)
+-	    if (scorePossiblyAddEntry(hs))
++    for (q = 0; q < n; q++) {
++        if ((hs = scoreReadScoreLine(merge)) != NULL) {
++	    if (scorePossiblyAddEntry(hs)) {
+ 		changed = 1;
+-	    else
++	    } else {
+ 		scoreFree(hs);
++	    }
++	}
++    }
+ 
+     /* possibly save new highscore table */
+     if (changed) {

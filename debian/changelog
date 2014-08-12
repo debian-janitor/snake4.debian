@@ -1,0 +1,198 @@
+snake4 (1.0.12-17) unstable; urgency=low
+
+  * Bump Standards-Version to 3.9.5 (no changes needed)
+  * Merged patches to install files on standard locations
+  * Updated maintainer contact information
+
+ -- Alexandre Dantas <eu@alexdantas.net>  Mon, 04 Aug 2014 19:25:36 -0400
+
+snake4 (1.0.12-16) unstable; urgency=low
+
+  * Rebuild to unstable
+
+ -- Alexandre Dantas <eu@alexdantas.net>  Thu, 02 May 2013 10:09:46 -0300
+
+snake4 (1.0.12-15) experimental; urgency=low
+
+  * New mantainer (Closes: #581387)
+  * Complied debian/copyright to the 1.0 format
+  * Bump debhelper version to 9
+  * Bump Standards-Version to 3.9.4 (no changes needed)
+  * debian/rules: started using dh --parallel
+  * Added a patch to fix hardening issues on compilation
+
+ -- Alexandre Dantas <eu@alexdantas.net>  Wed, 24 Apr 2013 11:20:30 -0300
+
+snake4 (1.0.12-14) unstable; urgency=low
+
+  * QA upload, incorporating old package found on mentors.debian.org
+    from Michael Boegl
+  * change to format "3.0 (quilt)"
+  * debhelper compatibility up to 7
+  * modernize debian/rules
+  - add build-arch/build-indep
+  - use dh_install instead of manual cp and heavily patched Makefile
+  - use dpkg-buildflags
+  * install default score file
+  * don't misuse dpkg-statoverride
+  * Standards-Version to 3.9.2
+  * add Vcs-*
+
+ -- Bernhard R. Link <brlink@debian.org>  Wed, 21 Sep 2011 15:43:40 +0200
+
+snake4 (1.0.12-13) unstable; urgency=low
+
+  * compiler warnings removed in score.c
+  * made lintian clean for 3.9.1
+  * Uploader removed upon mail request
+
+ -- Michael Boegl <m.b3941@web.de>  Mon, 17 Jan 2011 09:34:24 +0100
+
+snake4 (1.0.12-12) unstable; urgency=low
+
+  * New maintainer (Closes: #581387)
+
+ -- Michael Boegl <m.b3941@web.de>  Sun, 16 Jan 2011 17:12:44 +0100
+
+snake4 (1.0.12-11) unstable; urgency=low
+
+  * debian/menu: changed section to Games/Action, thanks to Bill Allombert.
+    (Closes: #444893)
+
+ -- Jose Carlos Medeiros <debian@psabs.com.br>  Sat, 03 Nov 2007 01:29:27 +0000
+
+snake4 (1.0.12-10) unstable; urgency=low
+
+  * Removed "-s" option from install and ldd  in Makefile, to complain with 
+    nostrip build option (policy 10.1). (Closes: #438031)
+  * Solved debian-rules-ignores-make-clean-error Lintian.
+  * snake4.desktop: removed invalid "Application" category.
+  * snake4.menu: changed section to "Games/Puzzles".
+
+ -- Jose Carlos Medeiros <debian@psabs.com.br>  Fri, 21 Sep 2007 17:34:24 -0300
+
+snake4 (1.0.12-9) unstable; urgency=low
+
+  * Bump Standards-Version: 3.7.2.
+  * DH_COMPAT = 5
+
+ -- Jose Carlos Medeiros <debian@psabs.com.br>  Thu, 17 May 2007 23:32:14 -0300
+
+snake4 (1.0.12-8) unstable; urgency=low
+
+  * Added libxmu-dev and libxpm-dev as Build-Depends. 
+  * Changed point from xpm.h to X11/xpm.h in score.c file. (closes: #365165)
+
+ -- Jose Carlos Medeiros <debian@psabs.com.br>  Fri, 28 Apr 2006 19:10:02 -0300
+
+snake4 (1.0.12-7) unstable; urgency=low
+
+  * Removed debian/compat file and put DH_COMPAT line in rules file.
+  * Updated to DH_COMPAT=5.
+  * Changed depends from Xaw8 to Xaw7. (closes: #359309)
+
+ -- Jose Carlos Medeiros <debian@psabs.com.br>  Mon, 27 Mar 2006 16:43:10 -0300
+
+snake4 (1.0.12-6) unstable; urgency=low
+
+  * Solved 'FTBFS: build-depends on removed xlibs-dev'. (Closes: #347089)
+
+ -- Jose Carlos Medeiros <debian@psabs.com.br>  Mon, 16 Jan 2006 20:51:09 -0200
+
+snake4 (1.0.12-5) unstable; urgency=low
+
+  * Updated debian/watch file.
+  * Added Ola as Uploader.
+  * Updated to Standards-Version: 3.6.2.
+  * Added snake4.xpm file, snake4.desktop file and updated menu file.
+  * Added debian/links file.
+
+ -- Jose Carlos Medeiros <debian@psabs.com.br>  Fri, 30 Sep 2005 14:09:26 -0300
+
+snake4 (1.0.12-4) unstable; urgency=low
+
+  * New maintainer (Closes: #273706)
+  * Added compat, watch and postrm file.
+  * Updated control, rules and postinst files to complain with debhelper 4.
+  * Updated license in debian/copyright file.
+  * Changed var/lib/games to var/games/snake4 in dirs file.
+  * Deleted conffile file.
+
+ -- Jose Carlos Medeiros <debian@psabs.com.br>  Fri,  1 Jul 2005 15:10:16 -0300
+
+snake4 (1.0.12-3) unstable; urgency=low
+
+  * QA Group upload orphaning this package
+  * debian/menu: quote the unquoted
+  * Incorporate previous NMU (closes: #170013)
+
+ -- Andrew Pollock <apollock@debian.org>  Tue,  9 Nov 2004 09:58:45 +1100
+
+snake4 (1.0.12-2.1) unstable; urgency=low
+
+  * NMU
+    - Moved Build-Depends from libxaw-dev to libxaw6-dev (Closes: #170013)
+    - Added proper information to debian/copyright
+
+ -- Javier Fernandez-Sanguino Pen~a <jfs@computer.org>  Fri,  9 Jan 2004 01:02:50 +0100
+
+snake4 (1.0.12-2) unstable; urgency=low
+
+  * Updated build-depends to libshhmsg1-dev and libshhopt1-dev
+    (Closes: #151100)
+
+ -- Karl Soderstrom <ks@debian.org>  Fri, 28 Jun 2002 19:08:38 +0200
+
+snake4 (1.0.12-1) unstable; urgency=low
+
+  * New upstream release (with clarified license in README)
+  * Updated debian/copyright with Artistic license (Closes: #130400)
+  * Fixed typo in description (Closes: #125369)
+  
+ -- Karl Soderstrom <ks@debian.org>  Sun, 31 Mar 2002 13:35:30 +0200
+
+snake4 (1.0.11-4) unstable; urgency=low
+
+  * Added sticky bit to /usr/games/snake4, which means it should
+  be possible to write to the high score file. (Closes: #115650)
+
+ -- Karl Soderstrom <ks@debian.org>  Fri, 14 Dec 2001 14:46:04 +0100
+
+snake4 (1.0.11-3) unstable; urgency=low
+
+  * Moved high score file to /var/games.
+
+ -- Karl Soderstrom <ks@debian.org>  Sat, 10 Mar 2001 11:56:07 +0100
+
+snake4 (1.0.11-2) unstable; urgency=low
+
+  * Updated maintainer email.
+  * Updated download URL and author contacts.
+  * Removed INSTALL and empty README.Debian.
+
+ -- Karl Soderstrom <ks@debian.org>  Sat, 27 Jan 2001 23:31:01 +0100
+
+snake4 (1.0.11-1) unstable; urgency=low
+
+  * New upstream release (Closes: #27562)
+  * New maintainer (Closes: #74839)
+  * Compiled against libxpm4 (Closes: #67950)
+  * Changed to debhelper
+  
+ -- Karl Soderstrom <coldn@gamearena.net>  Fri,  8 Dec 2000 20:20:04 +0100
+
+snake4 (1.0.10-1.1) unstable; urgency=low
+
+  * NMU by Branden Robinson <branden@debian.org>.
+  * Recompile against modern xpm4g package to get proper shared library
+    dependency and permit this package to be installed with forthcoming
+    XFree86 4.x packages, which include libXpm.
+  * debian/control: added Build-Depends
+
+ -- Branden Robinson <branden@debian.org>  Mon, 23 Oct 2000 14:28:59 -0500
+
+snake4 (1.0.10-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Ole J. Tetlie <olet@debian.org>  Sun,  7 Dec 1997 17:24:35 +0100
