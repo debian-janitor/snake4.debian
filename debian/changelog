@@ -1,3 +1,10 @@
+snake4 (1.0.13-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/patches: Removed patches incorporated by upstream
+
+ -- Alexandre Dantas <eu@alexdantas.net>  Wed, 13 Aug 2014 19:16:09 -0400
+
 snake4 (1.0.12-17) unstable; urgency=low
 
   [ Alexandre Dantas ]
