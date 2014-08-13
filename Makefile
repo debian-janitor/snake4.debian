@@ -3,7 +3,7 @@ PROG		= snake4
 DIST		= $(PROG)
 VERMAJ		= 1
 VERMIN		= 0
-VERPAT		= 12
+VERPAT		= 13
 VERSION		= $(VERMAJ).$(VERMIN).$(VERPAT)
 COMPILED_DATE	= `date '+%Y-%m-%d %H:%M:%S'`
 COMPILED_BY	= `whoami`
@@ -89,7 +89,7 @@ $(PROG): $(OBJS)
 	$(CC) -o $@ -c $(CCOPT) $<
 
 clean:
-	rm -f *.o core depend *~
+	rm -f *.o core depend *~ $(PROG)
 
 install: $(PROG)
 	install -d -m 755 $(INSTBINDIR) $(INSTLIBDIR) $(INSTMANDIR)

@@ -4,7 +4,7 @@
  *  FILE            board.c
  *  MODULE OF       snake4 - game of snake eating fruit
  *
- *  DESCRIPTION     
+ *  DESCRIPTION
  *
  *  WRITTEN BY      Sverre H. Huseby <shh@thathost.com>
  *
@@ -32,7 +32,7 @@
 #include "board.h"
 
 /* must be last to avoid redefinition of Pixel */
-#include <xpm.h>
+#include <X11/xpm.h>
 
 
 
@@ -443,7 +443,7 @@ void
 boardHandleEvent(XEvent *evt)
 {
     static int setupDone = 0;
-    KeySym ks;
+    KeySym* ks;
 
     switch (evt->type) {
       case Expose:
@@ -469,8 +469,10 @@ boardHandleEvent(XEvent *evt)
 	}
 	break;
       case KeyPress:
-	ks = XKeycodeToKeysym(winDisplay, evt->xkey.keycode, 0);
-	switch (ks) {
+      {
+	int keysymsPerKeycode;
+	ks = XGetKeyboardMapping(winDisplay, evt->xkey.keycode, 1, &keysymsPerKeycode);
+	switch (*ks) {
 	  case XK_Up:
 	  case XK_A:
 	  case XK_a:
@@ -540,7 +542,9 @@ boardHandleEvent(XEvent *evt)
 	    winChooseLevel(5);
 	    break;
 	}
+	XFree(ks);
 	break;
+	}
     }
 }
 
