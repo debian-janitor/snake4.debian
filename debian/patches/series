@@ -1,6 +1,2 @@
-0001-Changed-point-from-xpm.h-to-X11-xpm.h-in-score.c-fil.patch
-0002-compiler-warnings-removed-in-score.c.patch
-0003-fix-minus-hyphen-in-manpage.patch
-0004-hardening-flags-to-compiler.patch
-0005-make-clean-now-removes-executable.patch
-0006-standard-install-directories.patch
+0001-hardening-flags-to-compiler.patch
+0002-standard-install-directories.patch
