@@ -1,7 +1,7 @@
 Begin3
 Title:		snake4 - X11 game starring a fruit-eating snake
-Version:	1.0.13
-Entered-date:	13AUG14
+Version:	1.0.14
+Entered-date:	14AUG14
 Description:	Steer this fruitloving snake around the screen, and pick
 		up fruit.  The snake grows in length as it eats.  Watch
 		out for lethal mushrooms, rotten fruit, and evil
