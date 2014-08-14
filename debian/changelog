@@ -1,4 +1,4 @@
-snake4 (1.0.13-1) unstable; urgency=medium
+snake4 (1.0.14-1) unstable; urgency=medium
 
   * New upstream release
   * debian/patches: Removed patches incorporated by upstream
